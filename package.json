@@ -1,0 +1,14 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "Pizza Delivery application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
