@@ -1,7 +1,5 @@
-function checking(username:string){
-
-    console.log(username)
-
+function checking(username: string) {
+    console.log(username);
 }
 
-checking("hello")
+checking('hello');
