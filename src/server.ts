@@ -1,5 +1,9 @@
 function checking(username: string) {
     console.log(username);
+
+    return username;
 }
 
-checking('hello');
+const a:string=checking('hello');
+
+console.log(a)
