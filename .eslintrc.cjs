@@ -4,16 +4,18 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-type-checked',
         'prettier',
     ],
+    
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     parserOptions: {
-        project: true,
+        project: './tsconfig.json',
         tsconfigRootDir:__dirname,
     },
+
     root: true,
 
     rules: {
         semi: 'error',
-        'no-console': 'error',
+       'no-console': 'error',
     }
 };
