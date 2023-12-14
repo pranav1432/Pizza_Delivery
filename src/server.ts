@@ -1,9 +1,7 @@
 function checking(username: string) {
-    console.log(username);
-
     return username;
 }
 
-const a:string=checking('hello');
+const a = checking('hello');
 
-console.log(a)
+console.log(a);
