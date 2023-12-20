@@ -4,25 +4,30 @@
     "description": "Pizza Delivery application",
     "main": "index.js",
     "scripts": {
-        "dev": "node dist/server.js",
+        "dev": "nodemon src/server.ts",
         "format:check": "prettier . --check",
         "format:fix": "prettier . --write",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "type-check": "tsc --noemit",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "test": "jest"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/jest": "^29.5.11",
         "@types/node": "^20.10.4",
         "@typescript-eslint/eslint-plugin": "^6.14.0",
         "@typescript-eslint/parser": "^6.14.0",
         "eslint": "^8.55.0",
         "eslint-config-prettier": "^9.1.0",
         "husky": "^8.0.3",
+        "jest": "^29.7.0",
         "lint-staged": "^15.2.0",
         "prettier": "3.1.1",
+        "supertest": "^6.3.3",
+        "ts-jest": "^29.1.1",
         "typescript": "^5.3.3"
     },
     "lint-staged": {
@@ -30,5 +35,16 @@
             "npm run lint:fix",
             "npm run format:fix"
         ]
+    },
+    "dependencies": {
+        "@types/express": "^4.17.21",
+        "@types/supertest": "^2.0.16",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "nodemon": "^3.0.2",
+        "pg": "^8.11.3",
+        "reflect-metadata": "^0.2.1",
+        "ts-node": "^10.9.2",
+        "typeorm": "^0.3.17"
     }
 }
