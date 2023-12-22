@@ -1,12 +1,25 @@
-import { Request, Response } from "express";
+import { Response } from 'express';
+import { AppDataSource } from '../config/data-source';
+import { User } from '../entity/User';
+import { UserRequest } from '../types/user';
 
-export class AuthController{
 
-    register(req:Request,res:Response){
+export class AuthController {
 
-        res.status(200).json();
 
+    async register(req: UserRequest, res: Response) {
+
+
+        const {firstName,lastName,email,password}=req.body;
+
+
+        const userRepository=AppDataSource.getRepository(User);
+
+        await userRepository.save({firstName,lastName,email,password});
+
+
+
+        res.status(201).json();
     }
-
-
 }
+

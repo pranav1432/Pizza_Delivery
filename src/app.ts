@@ -1,8 +1,10 @@
-import express from "express";
-import UserRouter from "./routes/user";
+import express from 'express';
+import UserRouter from './routes/user';
 
-const app=express();
+const app = express();
 
- app.use('/auth',UserRouter);
+app.use(express.json());
+
+app.use('/auth', UserRouter);
 
 export default app;
