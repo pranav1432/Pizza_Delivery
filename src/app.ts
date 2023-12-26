@@ -1,5 +1,6 @@
 import express from 'express';
 import UserRouter from './routes/user';
+import 'reflect-metadata';
 
 const app = express();
 
