@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "NODE_ENV=dev nodemon src/server.ts",
+        "build":"tsc",
         "format:check": "prettier . --check",
         "format:fix": "prettier . --write",
         "lint": "eslint .",
@@ -13,7 +14,10 @@
         "prepare": "husky install",
         "test": "jest",
         "start": "ts-node src/index.ts",
-        "typeorm": "typeorm-ts-node-commonjs"
+        "migration:generate": "typeorm-ts-node-commonjs migration:generate",
+        "migration:run":"typeorm-ts-node-commonjs migration:run",
+        "migration:revert":"typeorm-ts-node-commonjs migration:revert",
+        "migration:show":"typeorm-ts-node-commonjs migration:show"
     },
     "author": "",
     "license": "ISC",

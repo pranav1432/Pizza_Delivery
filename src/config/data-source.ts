@@ -9,11 +9,11 @@ export const AppDataSource = new DataSource({
     host: Config.DB_HOST,
     port: Number(Config.DB_PORT),
     username: Config.DB_USERNAME,
-    password: Config.DB_PASSWORD,
+    password: Config.DB_PASSWORD,   
     database: Config.DB_NAME,
     synchronize: Config.NODE_ENV=='test' || Config.NODE_ENV=='development',
     logging: false,
     entities: [User],
-    migrations: [],
+    migrations: ["src/migration/*.ts"],
     subscribers: [],
 });
